@@ -1,0 +1,289 @@
+/* Global styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: rgb(3, 0, 31);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.App {
+    display: flex;
+    height: 100vh;
+    background-color: #f0f2f5;
+}
+
+
+/* Sidebar */
+
+.sideBar {
+    width: 250px;
+    background-color: #20232a;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.upperside {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+}
+
+
+/* Top section with logo and brand */
+
+.uppersideTop {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 50px;
+    /* Increased size */
+    height: 50px;
+    margin-right: 10px;
+}
+
+.brand {
+    font-size: 28px;
+    /* Increased size */
+    font-weight: bold;
+    color: #61dafb;
+}
+
+
+/* Button styles */
+
+.addBtn {
+    width: 30px;
+    height: 30px;
+}
+
+.midBtn {
+    background-color: #61dafb;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    /* Increased size */
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.midBtn img {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+button {
+    background-color: #282c34;
+    color: #61dafb;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 14px;
+    /* Increased size */
+}
+
+button img {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+button:hover {
+    background-color: #61dafb;
+    color: #282c34;
+    transform: translateY(-2px);
+}
+
+
+/* Query button styles */
+
+.query {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #282c34;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 5px;
+    font-size: 14px;
+    /* Increased size */
+}
+
+.query:hover {
+    background-color: #61dafb;
+    color: #282c34;
+    transform: translateY(-2px);
+}
+
+
+/* Lower side */
+
+.lowerSide {
+    margin-top: auto;
+    padding: 10px;
+    /* Reduced padding */
+    border-top: 1px solid #444;
+    text-align: center;
+}
+
+.listItems {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    /* Reduced padding */
+    font-size: 12px;
+    /* Reduced font size */
+}
+
+.listitemImg {
+    width: 20px;
+    /* Reduced width */
+    height: 20px;
+    /* Reduced height */
+    margin-right: 5px;
+    /* Reduced margin */
+}
+
+
+/* Background input section */
+
+.backgroundInput {
+    margin-top: 20px;
+}
+
+.backgroundInput input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 5px;
+    font-size: 14px;
+    width: calc(100% - 22px);
+}
+
+.backgroundInput button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 0 0 5px 5px;
+    cursor: pointer;
+    background-color: #61dafb;
+    color: white;
+    font-size: 14px;
+    width: calc(100% - 22px);
+}
+
+
+/* Main chat area */
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.chats {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.chat {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.chat img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.chat .txt {
+    background-color: hsl(0, 0%, 90%);
+    color: #000;
+    /* Ensure text is visible */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.chatFooter {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.inp {
+    display: flex;
+    width: 100%;
+}
+
+.inp input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+}
+
+.inp button {
+    background-color: #61dafb;
+    border: none;
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.inp button img {
+    width: 20px;
+    height: 30px;
+}
+
+
+/* Add responsiveness */
+
+@media (max-width: 768px) {
+    .sideBar {
+        width: 200px;
+    }
+    .brand {
+        font-size: 20px;
+    }
+    button {
+        padding: 8px;
+        font-size: 14px;
+    }
+    .main {
+        padding: 10px;
+    }
+}
